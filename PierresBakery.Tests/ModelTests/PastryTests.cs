@@ -1,10 +1,15 @@
-namespace PierresBakery.Tests;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using PierresBakery.Models;
 
-public class UnitTest1
+namespace PierresBakery.Tests
 {
-    [Fact]
-    public void Test1()
+    [TestClass]
+    public class PastryTests
     {
-
+        [TestMethod]
+        public void PastryCost_CalculateSinglePastryCost_Int()
+        {
+            Assert.AreEqual(2, Pastry.PastryCost(1));
+        }
     }
 }
