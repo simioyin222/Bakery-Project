@@ -11,5 +11,11 @@ namespace PierresBakery.Tests
         {
             Assert.AreEqual(2, Pastry.PastryCost(1));
         }
+
+        [TestMethod]
+        public void PastryCost_CalculateMultiplePastriesCostWithDeal_Int()
+        {
+            Assert.AreEqual(6, Pastry.PastryCost(4)); // Buy 3, get 1 free deal
+        }
     }
 }
