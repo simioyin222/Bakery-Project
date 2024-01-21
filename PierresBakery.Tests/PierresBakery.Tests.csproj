@@ -9,6 +9,9 @@
     <PackageReference Include="MSTest.TestAdapter" Version="2.2.7" />
     <PackageReference Include="MSTest.TestFramework" Version="2.2.7" />
     <PackageReference Include="coverlet.collector" Version="3.1.2" />
+  </ItemGroup>
+
   <ItemGroup>
-  <ProjectReference Include="../PierresBakery.csproj" />
-</ItemGroup>
+    <ProjectReference Include="../PierresBakery.csproj" />
+  </ItemGroup>
+</Project>
