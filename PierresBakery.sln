@@ -4,7 +4,7 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PierresBakery.Tests", "PierresBakery.Tests\PierresBakery.Tests.csproj", "{24ACE5F9-0AF7-418A-93E1-D6A3BB4FEB2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PierresBakery", "../PierresBakery.csproj", "{2ADFA937-6DFD-4479-B699-46519B682576}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PierresBakery", "./PierresBakery.csproj", "{2ADFA937-6DFD-4479-B699-46519B682576}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
