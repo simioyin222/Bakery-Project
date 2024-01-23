@@ -15,6 +15,6 @@
 </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../PierresBakery.csproj" />
+    <!-- <ProjectReference Include="../PierresBakery.csproj" /> \\ (change path) -->
   </ItemGroup>
 </Project>
