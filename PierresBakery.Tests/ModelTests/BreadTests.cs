@@ -14,17 +14,17 @@ namespace PierresBakery.Tests
         }
 
         [TestMethod]
-        public void CalculateTotalCost_ReturnsCorrectTotalCostForSingleLoaf_Int()
-        {
-            Bread breadOrder = new Bread(1);
-            Assert.AreEqual(5, breadOrder.CalculateTotalCost());
-        }
-
-        [TestMethod]
-        public void CalculateTotalCost_ReturnsCorrectTotalCostForThreeLoaves_Int()
+        public void CalculateTotalCost_ReturnsCorrectTotalCostForBreadOrder_Int()
         {
             Bread breadOrder = new Bread(3);
             Assert.AreEqual(10, breadOrder.CalculateTotalCost());
+        }
+
+        [TestMethod]
+        public void CalculateTotalCost_ReturnsZeroForZeroLoaves_Int()
+        {
+            Bread breadOrder = new Bread(0);
+            Assert.AreEqual(0, breadOrder.CalculateTotalCost());
         }
     }
 }
