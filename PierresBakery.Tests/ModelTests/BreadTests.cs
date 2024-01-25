@@ -3,19 +3,28 @@ using PierresBakery.Models;
 
 namespace PierresBakery.Tests
 {
-    [Microsoft.VisualStudio.TestTools.UnitTesting.TestClass]
+    [TestClass]
     public class BreadTests
     {
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethod]
-        public void BreadCost_CalculateSingleLoafCost_Int()
+        [TestMethod]
+        public void BreadConstructor_CreatesInstanceOfBread_Bread()
         {
-            Assert.AreEqual(5, Bread.BreadCost(1));
+            Bread breadOrder = new Bread(2);
+            Assert.AreEqual(typeof(Bread), breadOrder.GetType());
         }
 
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethod]
-        public void BreadCost_CalculateMultipleLoavesCostWithDeal_Int()
+        [TestMethod]
+        public void CalculateTotalCost_ReturnsCorrectTotalCostForSingleLoaf_Int()
         {
-            Assert.AreEqual(10, Bread.BreadCost(3));
+            Bread breadOrder = new Bread(1);
+            Assert.AreEqual(5, breadOrder.CalculateTotalCost());
+        }
+
+        [TestMethod]
+        public void CalculateTotalCost_ReturnsCorrectTotalCostForThreeLoaves_Int()
+        {
+            Bread breadOrder = new Bread(3);
+            Assert.AreEqual(10, breadOrder.CalculateTotalCost());
         }
     }
 }
