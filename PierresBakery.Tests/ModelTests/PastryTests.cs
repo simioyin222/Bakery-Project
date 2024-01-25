@@ -14,17 +14,17 @@ namespace PierresBakery.Tests
         }
 
         [TestMethod]
-        public void CalculateTotalCost_ReturnsCorrectTotalCostForSinglePastry_Int()
-        {
-            Pastry pastryOrder = new Pastry(1);
-            Assert.AreEqual(2, pastryOrder.CalculateTotalCost());
-        }
-
-        [TestMethod]
-        public void CalculateTotalCost_ReturnsCorrectTotalCostForFourPastries_Int()
+        public void CalculateTotalCost_ReturnsCorrectTotalCostForPastryOrder_Int()
         {
             Pastry pastryOrder = new Pastry(4);
             Assert.AreEqual(6, pastryOrder.CalculateTotalCost());
+        }
+
+        [TestMethod]
+        public void CalculateTotalCost_ReturnsZeroForZeroPastries_Int()
+        {
+            Pastry pastryOrder = new Pastry(0);
+            Assert.AreEqual(0, pastryOrder.CalculateTotalCost());
         }
     }
 }
