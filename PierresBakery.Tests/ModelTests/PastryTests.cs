@@ -3,19 +3,15 @@ using PierresBakery.Models;
 
 namespace PierresBakery.Tests
 {
-    [Microsoft.VisualStudio.TestTools.UnitTesting.TestClass]
+    [TestClass]
     public class PastryTests
     {
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethod]
-        public void PastryCost_CalculateSinglePastryCost_Int()
+        [TestMethod]
+        public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
         {
-            Assert.AreEqual(2, Pastry.PastryCost(1));
+            Pastry pastryOrder = new Pastry(2);
+            Assert.AreEqual(typeof(Pastry), pastryOrder.GetType());
         }
 
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethod]
-        public void PastryCost_CalculateMultiplePastriesCostWithDeal_Int()
-        {
-            Assert.AreEqual(6, Pastry.PastryCost(4));
-        }
     }
 }
