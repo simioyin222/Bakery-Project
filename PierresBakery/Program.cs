@@ -18,7 +18,15 @@ namespace PierresBakery
             Console.Write("Enter the number of Pastries you'd like: ");
             int pastryCount = Convert.ToInt32(Console.ReadLine());
 
-            int totalCost = Bread.BreadCost(breadCount) + Pastry.PastryCost(pastryCount);
+            Bread breadOrder = new Bread(breadCount);
+            Pastry pastryOrder = new Pastry(pastryCount);
+
+            int breadCost = breadOrder.CalculateTotalCost();
+            int pastryCost = pastryOrder.CalculateTotalCost();
+            int totalCost = breadCost + pastryCost;
+
+            Console.WriteLine($"The total cost for Bread is: ${breadCost}");
+            Console.WriteLine($"The total cost for Pastries is: ${pastryCost}");
             Console.WriteLine($"The total cost for your order is: ${totalCost}");
 
             Console.WriteLine("Thank you for visiting Pierre's Bakery!");
