@@ -2,12 +2,18 @@ namespace PierresBakery.Models
 {
     public class Bread
     {
-        public static int BreadCost(int quantity)
+        public int Quantity { get; set; }
+
+        public Bread(int quantity)
+        {
+            Quantity = quantity;
+        }
+
+        public int CalculateTotalCost()
         {
             int pricePerLoaf = 5;
-            int numberOfFreeLoaves = quantity / 3;
-            int totalCost = (quantity - numberOfFreeLoaves) * pricePerLoaf;
-            return totalCost;
+            int numberOfFreeLoaves = Quantity / 3;
+            return (Quantity - numberOfFreeLoaves) * pricePerLoaf;
         }
     }
 }
